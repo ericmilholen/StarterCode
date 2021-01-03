@@ -3,6 +3,7 @@
     <h1>{{ value }}</h1>
     <h1>{{ response }}</h1>
     <button class="btn btn-primary">Litty Again</button>
+    <BButton variant="primary">Yes</BButton>
   </div>
 </template>
 
