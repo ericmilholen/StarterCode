@@ -5,16 +5,20 @@ import axios from 'axios'
 const authAxios = async () => {
     return axios.create({
         baseURL: '/pages',
+        headers: {
+            
+        }
     })
 }
 
 
 async function s_home() {
     try {
-        const returned = await authAxios.get('/')
+        const response = await axios.create().get('/pages/')
 
-        return (returned.data)
-    } catch (err) {
+        return response.data
+    }
+    catch (err) {
         return err
     }
 }

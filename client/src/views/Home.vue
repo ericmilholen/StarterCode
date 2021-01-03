@@ -1,12 +1,13 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+  <div class="container">
     <h1>{{ value }}</h1>
     <h1>{{ response }}</h1>
+    <button class="btn btn-primary">Litty Again</button>
   </div>
 </template>
 
 <script>
+import PageService from "../services/PageService"
 // @ is an alias to /src
 export default {
   name: 'Home',
@@ -21,10 +22,9 @@ export default {
   components: {
   },
 
-  created: function() {
+  created: async function() {
     console.log("Hey I just got created")
-    this.value = 10
-  
+    this.response = await PageService.s_home()
   },
 }
 </script>

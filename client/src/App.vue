@@ -1,9 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/about">About</RouterLink>
-    </div>
-    <RouterView />
-  </div>
+	<div id="app">
+		<NavBar></NavBar> 
+		<RouterView />
+	</div>
 </template>
+
+<script>
+import NavBar from "../src/components/NavBar"
+export default {
+	components: {
+		NavBar
+	}
+}
+</script>

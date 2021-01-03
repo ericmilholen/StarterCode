@@ -11,17 +11,19 @@ const port = 5000
 
 
 // [HOME ROUTE] //
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/pages/', (req, res) => {
+  res.send({
+    Lit: true
+  })
 })
 
 
-app.get('/about', (req, res) => {
+app.get('/pages/about', (req, res) => {
     res.send('About!')
 })
 
 
-app.get('/page', (req, res) => {
+app.get('/pages/dashboard', (req, res) => {
     res.send('Page!')
 })
 
