@@ -15,6 +15,5 @@ async function s_home() {
 
 
 export default {
-    authAxios,
     s_home,
 }
