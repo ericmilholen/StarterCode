@@ -1,5 +1,10 @@
 // [REQUIRE] //
+const cors = require('cors')
 const express = require('express')
+
+
+// [REQUIRE] Personal // 
+const p_ = require('./s-routes/pages')
 
 
 // [EXPRESS] //
@@ -9,14 +14,9 @@ const app = express()
 // [INIT] Const //
 const port = 5000
 
+app.use(cors())
 
-// [HOME ROUTE] //
-app.get('/pages/', (req, res) => {
-  res.send({
-    Lit: true
-  })
-})
-
+app.use('/pages', p_)
 
 app.get('/pages/about', (req, res) => {
     res.send('About!')
