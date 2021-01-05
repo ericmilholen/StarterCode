@@ -1,12 +1,12 @@
 // [IMPORT] //
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // [IMPORT] Personal //
 import App from './App.vue'
 import router from './router'
-import "bootstrap/dist/css/bootstrap.css"
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/styles/bootstrap-override.scss'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)

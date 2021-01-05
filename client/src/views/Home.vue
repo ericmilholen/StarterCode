@@ -1,10 +1,12 @@
 <template>
-  <div class="container">
-    <h1>{{ value }}</h1>
-    <h1>{{ response }}</h1>
-    <button class="btn btn-primary">Litty Again</button>
-    <BButton variant="primary">Yes</BButton>
-  </div>
+  <BContainer>
+    <BButton
+      variant="primary"
+      @click="getPageData()"
+    >Update Data</BButton>
+    
+    <h1 v-if="response">Data Receieved: {{ response }}</h1>
+  </BContainer>
 </template>
 
 <script>
@@ -16,16 +18,20 @@ export default {
   data() {
     return {
       response: "",
-      value: 0
     }
   },
 
-  components: {
-  },
+  components: {},
 
   created: async function() {
     console.log("Hey I just got created")
+    this.getPageData()
+  },
+
+  methods: {
+    async getPageData() {
     this.response = await PageService.s_home()
+    }
   },
 }
 </script>
