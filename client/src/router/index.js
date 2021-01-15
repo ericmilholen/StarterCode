@@ -3,8 +3,8 @@
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home'
-import About from '../views/About'
+import Index from '../views'
+import About from '../views/about'
 
 Vue.use(VueRouter)
 
@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Index
   },
   {
     path: '/about',
